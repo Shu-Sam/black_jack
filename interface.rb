@@ -41,27 +41,30 @@ class Interface
   end
 
   def open_cards
+    puts '__________________________________'
     puts 'Карты вскрыты. Результат раздачи:'
-    board.summarizing
+    board.open_cards
+    puts board.result
     puts '__________________________________'
   end
   
   def take_card
-    board.take_card(board.user)
-    board.dealer_move
-    puts board.user
+    board.take_user_card
+    # puts board.show_user
+    # puts board.show_dealer
   end
   
   def skip_move
     puts 'Вы пропустили ход'
     board.dealer_move
+    # puts board.show_dealer
   end
   
   def play_game
     puts 'Игра началась'
     board.start
-    puts board.user
-    puts board.dealer
+    # puts board.show_user
+    # puts board.show_dealer
 
     loop do
       show_game_menu
