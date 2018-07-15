@@ -14,7 +14,6 @@ class Gambler
 
   def take_cards(cards)
     self.hand += cards
-    puts self
   end
   
   def points

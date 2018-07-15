@@ -31,10 +31,10 @@ class Board
     summarizing
   end
   
-  def dealer_move
-    take_card(dealer) if dealer.points < 17
+  def skip_move
+    dealer_move
   end
-
+  
   def show_user
     user.to_s
   end
@@ -84,6 +84,10 @@ class Board
         dead_heat
       end
     end
+  end
+
+  def dealer_move
+    take_card(dealer) if dealer.points < 17
   end
   
   def you_won

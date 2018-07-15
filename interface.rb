@@ -50,21 +50,21 @@ class Interface
   
   def take_card
     board.take_user_card
-    # puts board.show_user
-    # puts board.show_dealer
+    puts board.show_user
+    puts board.show_dealer
   end
   
   def skip_move
     puts 'Вы пропустили ход'
-    board.dealer_move
-    # puts board.show_dealer
+    board.skip_move
+    puts board.show_dealer
   end
   
   def play_game
     puts 'Игра началась'
     board.start
-    # puts board.show_user
-    # puts board.show_dealer
+    puts board.show_user
+    puts board.show_dealer
 
     loop do
       show_game_menu
