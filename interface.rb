@@ -25,7 +25,7 @@ class Interface
         break if index != Strategy::SKIP_MOVE
       end
       
-      do_and_print_action(Strategy::OPEN_CARDS)
+      do_and_print_action(Strategy::OPEN_CARDS) unless index == Strategy::OPEN_CARDS
     end
   end
 
